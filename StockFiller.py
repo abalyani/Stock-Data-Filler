@@ -2,7 +2,7 @@ def FillStocks(df):
     # importing pandas
     import pandas as pd
   
-    # r for range of correct date values
+    # r for range of correct date values (all days of the provided interval in the given dataframe)
     r = pd.date_range(start=df.index.min(), end=df.index.max())
     
     # reindexing the dates of the dataframe

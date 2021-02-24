@@ -62,8 +62,8 @@ ax.plot(aapl_df_filled.index,aapl_df_filled['Open'])
 Wonderful! Now our dataframe is ready to be plotted alongside any other time-series type data.
 
 ## Recommendations and notes
-If you'd like to use this script with other libraries that download stock data make sure that it's a:
+If you'd like to use this script with libraries (other than `yfinance`) that are capable of downloading stock data make sure that they meet these requirements:
 
- 1. Pandas DataFrame (or .csv file).
+ 1. The data is a pandas DataFrame (or .csv file).
  2. In long format (where the date is recorded in the column axis).
  3. The date column must be the index of the DataFrame.

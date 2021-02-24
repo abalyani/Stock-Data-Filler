@@ -1,4 +1,5 @@
 
+
 # Stock Data Filler
 Simple script to fill in stock's data on weekends and other days where the market is down and no sales have been made.
 ## Motivation
@@ -57,3 +58,12 @@ ax.plot(aapl_df_filled.index,aapl_df_filled['Open'])
 # will result in:
 ```
 ![Fixed plot of the stock](https://i.imgur.com/EGsOl4w.jpg)
+
+Wonderful! Now our dataframe is ready to be plotted alongside any other time-series type data.
+
+## Recommendations and notes
+If you'd like to use this script with other libraries that download stock data make sure that it's a:
+
+ 1. Pandas DataFrame (or .csv file).
+ 2. In long format (where the date is recorded in the column axis).
+ 3. The date column must be the index of the DataFrame.

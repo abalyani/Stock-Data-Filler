@@ -7,7 +7,7 @@ This can be problematic when plotting a stock's data alongside another piece of 
 As you'll be faced with a mismatch error due to the days of the stocks being less then whatever other data you're using.
 ## Use
 First download the stock data you'd want. I highly recommend the Yahoo Finance library `yfinance`. 
-Here's a quick demonstration on how to do so.
+Here's a quick demonstration on how to do just that.
 ```python 
 import yfinance as yf
 aapl_df = yf.download('AAPL', 

@@ -22,6 +22,7 @@ aapl_df.head(10)
 ```
 
 ![Table representing Apple's stocks from 2019/12/31-2020/01/14](https://i.imgur.com/jzQImtS.jpg)
+
 As you can easily observe in under the highlighted days there appears to be a 2 day jump.
 Now let's import the script and apply it to our dataframe of apple's stock.
 ```python 

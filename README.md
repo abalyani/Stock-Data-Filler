@@ -42,7 +42,7 @@ ax.plot(aapl_df_filled.index,aapl_df_filled['Open'])
 ```
 ![Bad apple stock representation](https://i.imgur.com/SYK1kLt.png)
 
-What an absolute mess right? Luckily the script was never intended to be used like this. If you recall in the earlier snippet of code in the call of my script `StockFiller` we set the `fill` parameter to `False` just for the sake of showing what the script does without too much confusing. But, now let's get in to it.
+What an absolute mess right? Luckily the script was never intended to be used like this. If you recall in the earlier snippet of code we called the method `FillStcok` from the script `StockFiller`, and we set the `fill` parameter to `False` just for the sake of showing what the script does without too much confusing but, now let's get in to it.
 ```python
 from StockFiller import FillStocks
 aapl_df_filled = FillStocks(aapl_df,fill=True)
@@ -51,7 +51,7 @@ aapl_df_filled.head(10)
 ```
 ![Table representing Apple's stocks from 2019/12/31-2020/01/14, but with the missing days added and, values filled](https://i.imgur.com/JkB8iSI.jpg)
 
-The empty slots were filled by feeding the value from the previous day (Which intuitively makes perfect sense, as the price hasn't changed over the weekend due to the simple fact that no is buying or selling).
+The empty slots were filled by feeding the value from the previous day (Which intuitively makes perfect sense, as the price hasn't changed over the weekend due to the simple fact that no one is buying or selling).
 Now if we were to plot it we would get a very clear representation of the change in stock price.
 ```python
 ax.plot(aapl_df_filled.index,aapl_df_filled['Open'])

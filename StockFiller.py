@@ -1,4 +1,4 @@
-def FillStocks(df):
+def FillStocks(df,fill = True):
     # importing pandas
     import pandas as pd
   
@@ -12,9 +12,10 @@ def FillStocks(df):
     col = df.columns[0]
     max_NANs = max(df[col].isnull().astype(int).groupby(df[col].notnull().astype(int).cumsum()).sum())
     
-    # filling the NANs using 'pad' or 'ffill' A.K.A. 'feed values forward'
-    df = df.fillna(method='pad')
+    if(fill == True):
+        # filling the NANs using 'pad' or 'ffill' A.K.A. 'feed values forward'
+        df = df.fillna(method = 'pad')
     
     # simple print and return
-    print("The highest number of subsequent NAN values was \""+str(max_NANs)+"\". If the nubmer is 3 or less than you're good to go!")
+    print("The highest number of subsequent days without data was \""+str(max_NANs)+"\". If the nubmer is 3 or less than you're good to go!")
     return df

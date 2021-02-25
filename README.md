@@ -14,7 +14,7 @@ Here's an example of what you might **want** to be plotting.
 
 Unfortunately that's not exactly possible right away without a little bit of tweaking with the stock data.
 ## Use
-First download the stock data you'd want. I highly recommend the Yahoo Finance library `yfinance`. 
+First download the stock data you'd want. I highly recommend the Yahoo Finance library `yfinance` . 
 Here's a quick demonstration on how to do just that.
 ```python 
 import yfinance as yf

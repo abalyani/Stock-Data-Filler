@@ -1,11 +1,16 @@
 
 
+
 # Stock Data Filler
 Simple script to fill in stock's data on weekends and other days where the market is down and no sales have been made.
 ## Motivation
 When using stock data you'll notice that some rows are missing. That's due to the fact that the stock market doesn't operate every day of the week. On the weekend the stock market closes, and with that no one can sell or buy stocks. So when accessing data of a certain stock you'll find that only a maximum of 5 or 6 subsequent days are available and then a 2-3 day jump.
 This can be problematic when plotting a stock's data alongside another piece of data that's not constrained by weekends.
 As you'll be faced with a mismatch error due to the days of the stocks being less then whatever other data you're using.
+Here's an example of what you might **want** to be plotting.
+![enter image description here](https://i.imgur.com/hGhyTVW.png)
+
+Unfortunately that's not exactly possible right away without a little bit of tweaking with the stock data.
 ## Use
 First download the stock data you'd want. I highly recommend the Yahoo Finance library `yfinance`. 
 Here's a quick demonstration on how to do just that.
@@ -13,8 +18,7 @@ Here's a quick demonstration on how to do just that.
 import yfinance as yf
 aapl_df = yf.download('AAPL', 
                       start='2020-01-01', 
-                      end='2020-12-31', 
-                      progress=False)
+                      end='2020-12-31')
 ```
 After obtaining the stock data and storing it in a variable if you'd display the elements you'd notice the absence of the mentioned days.
 ```python 
@@ -60,6 +64,8 @@ ax.plot(aapl_df_filled.index,aapl_df_filled['Open'])
 ![Fixed plot of the stock](https://i.imgur.com/EGsOl4w.jpg)
 
 Wonderful! Now our dataframe is ready to be plotted alongside any other time-series type data.
+
+
 
 ## Recommendations and notes
 If you'd like to use this script with libraries (other than `yfinance`) that are capable of downloading stock data make sure that they meet these requirements:

@@ -57,7 +57,7 @@ aapl_df_filled.head(10)
 ```
 ![Table representing Apple's stocks from 2019/12/31-2020/01/14, but with the missing days added and, values filled](https://i.imgur.com/JkB8iSI.jpg)
 
-The empty slots were filled by feeding the value from the previous day (Which intuitively makes perfect sense, as the price hasn't changed over the weekend due to the simple fact that no one is buying or selling).
+The empty slots were filled by feeding the value from the previous day (which intuitively makes perfect sense, as the price hasn't changed over the weekend due to the simple fact that no one is buying or selling).
 Now if we were to plot it we would get a very clear representation of the change in stock price.
 ```python
 ax.plot(aapl_df_filled.index,aapl_df_filled['Open'])

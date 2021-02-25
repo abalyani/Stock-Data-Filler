@@ -71,6 +71,7 @@ Wonderful! Now our dataframe is ready to be plotted alongside any other time-ser
 
 ## Recommendations and notes
 I do NOT recommend that you use this script with predictive models as the filled values might give undesired results. The purpose of this script is to be used in plotting and/or comparing stock data to other time-series type data.
+
 If you'd like to use this script with libraries (other than `yfinance`) that are capable of downloading stock data make sure that they meet these requirements:
 
  1. The data is a pandas DataFrame (or .csv file).

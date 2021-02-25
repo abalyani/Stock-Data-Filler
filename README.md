@@ -1,6 +1,7 @@
 
 
 
+
 # Stock Data Filler
 Simple script to fill in stock's data on weekends and other days where the market is down and no sales have been made.
 ## Motivation
@@ -8,7 +9,8 @@ When using stock data you'll notice that some rows are missing. That's due to th
 This can be problematic when plotting a stock's data alongside another piece of data that's not constrained by weekends.
 As you'll be faced with a mismatch error due to the days of the stocks being less then whatever other data you're using.
 Here's an example of what you might **want** to be plotting.
-![enter image description here](https://i.imgur.com/hGhyTVW.png)
+
+![enter image description here](https://i.imgur.com/ArYj8WP.png)
 
 Unfortunately that's not exactly possible right away without a little bit of tweaking with the stock data.
 ## Use

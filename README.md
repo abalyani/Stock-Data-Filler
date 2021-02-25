@@ -67,3 +67,5 @@ If you'd like to use this script with libraries (other than `yfinance`) that are
  1. The data is a pandas DataFrame (or .csv file).
  2. In long format (where the date is recorded in the column axis).
  3. The date column must be the index of the DataFrame.
+
+As you may have noticed after calling the `FillStock` method a print statement is executed and specifiecs the maximum number of subsequent "missing days". This is very important as if there were to be more than 3 or 4 days missing then that'd be an indicator that there's a problem with the data you have.
